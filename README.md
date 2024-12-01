@@ -35,7 +35,7 @@ maturin develop -r
 jupyter lab
 ```
 
-### Option A: Pre-installed Python
+### Option B: Pre-installed Python
 
 Needs at least Python 3.7.
 

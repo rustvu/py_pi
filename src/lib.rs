@@ -45,7 +45,7 @@ fn parallel(n: usize) -> f64 {
 
 /// A Python module implemented in Rust.
 #[pymodule]
-fn py_pi(_py: Python, m: &PyModule) -> PyResult<()> {
+fn py_pi(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(single, m)?)?;
     m.add_function(wrap_pyfunction!(parallel, m)?)?;
     Ok(())
