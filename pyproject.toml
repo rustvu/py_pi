@@ -1,5 +1,5 @@
 [build-system]
-requires = ["maturin>=1.3,<2.0"]
+requires = ["maturin>=1.10,<2.0"]
 build-backend = "maturin"
 
 [project]
@@ -11,6 +11,15 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dynamic = ["version"]
-
+[project.optional-dependencies]
+tests = [
+    "pytest",
+]
 [tool.maturin]
-features = ["pyo3/extension-module"]
+python-source = "python"
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "numpy>=1.24.4",
+]

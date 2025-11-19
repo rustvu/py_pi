@@ -5,11 +5,11 @@ use rand::Rng;
 use std::thread;
 
 fn monte_carlo_pi(n: usize) -> usize {
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     let mut inside = 0;
     for _ in 0..n {
-        let x = rng.gen_range(-1.0..1.0);
-        let y = rng.gen_range(-1.0..1.0);
+        let x = rng.random_range(-1.0..1.0);
+        let y = rng.random_range(-1.0..1.0);
         if x * x + y * y <= 1.0 {
             inside += 1;
         }
