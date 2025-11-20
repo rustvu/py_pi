@@ -18,11 +18,3 @@ Obviously, you also need Rust installed. See the [Installing Rust](https://www.r
    ```bash
    uv run jupyter notebook experiment.ipynb
    ```
-
-## Tests
-
-To run the tests, use:
-
-```bash
-uv run --with ".[tests]" pytest
-```
